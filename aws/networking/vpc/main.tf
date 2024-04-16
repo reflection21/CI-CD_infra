@@ -22,7 +22,7 @@ provider "aws" {
       "Team"            = "DevOps",
       "DeployedBy"      = "Terraform",
       "OwnerEmail"      = "artembrigaz@example.com"
-      "Type"            = "Networking"
+      "Type"            = "Networkingg"
     }
   }
 }
