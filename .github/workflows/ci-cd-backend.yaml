@@ -22,7 +22,7 @@ jobs:
         working-directory: ${{ env.working-directory }}
     steps:
       - name: Checkout
-        uses: action/checkout@v4 #clone repository
+        uses: actions/checkout@v4 #clone repository
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v4
         with:
