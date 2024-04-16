@@ -19,7 +19,7 @@ jobs:
     strategy:
       max-parallel: 1
       matrix:
-        tf_actions_working_dir: [aws/networking/vpc, aws/networking/sg]
+        tf_actions_working_dir: [aws/networking/sg, aws/networking/vpc]
     name: "Terraform"
     runs-on: ubuntu-latest
     permissions:
