@@ -21,7 +21,7 @@ provider "aws" {
       "Environment"     = "Development",
       "Team"            = "DevOps",
       "DeployedBy"      = "Terraform",
-      "OwnerEmail"      = "artembrigaz@example.com"
+      "OwnerEmail"      = "artembrgaz@example.com"
       "Type"            = "sg"
     }
   }
