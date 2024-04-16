@@ -18,7 +18,7 @@ provider "aws" {
   default_tags {
     tags = {
       "TerminationDate" = "Permanent",
-      "Environment"     = "Development",
+      "Environment"     = "DevelopmentT",
       "Team"            = "DevOps",
       "DeployedBy"      = "Terraform",
       "Application"     = "Terraform Backend",
