@@ -1,4 +1,5 @@
 name: "Terraform CI/CD Backend"
+
 on:
   push:
     branches:
@@ -22,15 +23,17 @@ jobs:
         working-directory: ${{ env.working-directory }}
     steps:
       - name: Checkout
-        uses: actions/checkout@v4 #clone repository
+        uses: actions/checkout@v2
+
       - name: Configure AWS credentials
-        uses: aws-actions/configure-aws-credentials@v4
+        uses: aws-actions/configure-aws-credentials@v1
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ${{ secrets.AWS_REGION }}
+
       - name: Setup Terraform
-        uses: hashicorp/setup-terraform@v3
+        uses: hashicorp/setup-terraform@v1
         with:
           terraform_version: 1.8.0
 
@@ -53,7 +56,7 @@ jobs:
         run: terraform plan -no-color
         continue-on-error: true
 
-      - uses: actions/github-script@v6
+      - uses: actions/github-script@0.9.0
         if: github.event_name == 'pull_request'
         env:
           PLAN: "terraform\n${{ steps.plan.outputs.stdout }}"
