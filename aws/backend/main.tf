@@ -20,7 +20,7 @@ provider "aws" {
       "TerminationDate" = "Permanent",
       "Environment"     = "Development",
       "Team"            = "DevOps",
-      "DeployedBy"      = "Terraformm",
+      "DeployedBy"      = "Terraform",
       "Application"     = "Terraform Backend",
       "OwnerEmail"      = "artembrigaz@example.com"
     }
